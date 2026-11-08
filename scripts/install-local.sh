@@ -26,5 +26,5 @@ install -Dm 644 assets/icon-512.png "$ICONS/512x512/apps/margin.png"
 install -Dm 644 assets/icon.svg "$ICONS/scalable/apps/margin.svg"
 sed "s#@BIN@#$BIN/margin#g" packaging/margin.desktop.in > "$APPS/margin.desktop"
 update-desktop-database "$APPS" 2>/dev/null || true
-gtk-update-icon-cache -q -t "$ICONS" 2>/dev/null || true
+[ -f "$ICONS/icon-theme.cache" ] && gtk-update-icon-cache -q "$ICONS" 2>/dev/null || true  # refresh, never create, a cache
 echo "Margin installed: $BIN/margin, and in the app launcher."
