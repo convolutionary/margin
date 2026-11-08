@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.png" alt="Margin" width="100%"></p>
+
 # Margin
 
 A text editor for files of any size, for Linux and Windows. Open a 300 GB log as fast as a
