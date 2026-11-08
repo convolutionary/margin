@@ -1,0 +1,30 @@
+[package]
+name = "margin"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members = ["crates/margin-core"]
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = true
+
+[dependencies]
+margin-core = { path = "crates/margin-core" }
+crossbeam-channel = "0.5.17"
+dirs = "7.0.0"
+eframe = { version = "0.37.0", default-features = false, features = ["glow", "wayland", "x11", "clipboard", "accesskit", "default_fonts"] }
+egui = { version = "0.37.0", default-features = false, features = ["default_fonts"] }
+ignore = "0.4.34"
+interprocess = "2.4.8"
+parking_lot = "0.13.0"
+regex = "1.13.1"
+rfd = "0.18.0"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+syntect = { version = "5.3.0", default-features = false, features = ["default-syntaxes", "parsing", "regex-onig"] }
+two-face = { version = "0.5.2", default-features = false, features = ["syntect-onig"] }
+encoding_rs = "0.8.44"
+memchr = "2.8.3"

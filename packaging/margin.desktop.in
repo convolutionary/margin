@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Name=Margin
+GenericName=Text Editor
+Comment=Edit text files of any size, even hundreds of gigabytes
+Exec=@BIN@ %F
+Icon=margin
+Terminal=false
+Categories=Utility;TextEditor;Development;
+Keywords=text;editor;notepad;log;code;large;huge;
+StartupWMClass=margin
+StartupNotify=true
+MimeType=text/plain;text/x-log;text/markdown;text/csv;text/x-csrc;text/x-chdr;text/x-c++src;text/x-c++hdr;text/x-python;text/x-rust;text/x-go;text/x-java;text/x-lua;text/x-sql;text/x-diff;text/x-patch;text/x-makefile;text/x-cmake;text/x-shellscript;application/x-shellscript;application/json;application/x-yaml;application/toml;application/xml;text/xml;text/css;text/html;text/javascript;application/javascript;application/x-desktop;text/x-readme;
+Actions=new-window;
+
+[Desktop Action new-window]
+Name=New window
+Exec=@BIN@ --new-window

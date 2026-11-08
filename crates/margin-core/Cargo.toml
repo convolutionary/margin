@@ -1,0 +1,16 @@
+[package]
+name = "margin-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bytecount = { version = "0.6.9", features = ["runtime-dispatch-simd"] }
+chardetng = "1.0.0"
+encoding_rs = "0.8.44"
+memchr = "2.8.3"
+memmap2 = "0.9.12"
+parking_lot = "0.13.0"
+regex = "1.13.1"
+
+[dev-dependencies]
+tempfile = "3.27.0"
